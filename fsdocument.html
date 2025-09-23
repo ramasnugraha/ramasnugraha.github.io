@@ -221,194 +221,119 @@ mjx-container { break-inside: avoid; }
 .md-alert-text-container::after { content: attr(data-text); text-transform: capitalize; pointer-events: none; margin-right: 1ch; }
 
 </style>
-<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Merriweather:900,900italic,300,300italic&amp;subset=latin-ext' type='text/css' />
-<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lato:900,300&amp;subset=latin-ext' type='text/css' />
-<style type='text/css'  id="style-theme_css">@include-when-export url(https://fonts.googleapis.com/css?family=Merriweather:900,900italic,300,300italic&subset=latin-ext);
-@include-when-export url(https://fonts.googleapis.com/css?family=Lato:900,300&subset=latin-ext);
-
+<style type='text/css'  id="style-theme_css">import url(https://fonts.googleapis.com/css?family=Open%20Sans);
 :root {
-	--control-text-color: #777;
+    --code-block-bg-color: inherit;//#f8f8f8;
+
+    --item-hover-bg-color: #0a0d16;
+    --control-text-color: #b7b7b7;
+    --control-text-hover-color: #eee;
+    --window-border: 1px dashed #9b9b9b;
+
+    --active-file-bg-color: #0070E0;
+    --active-file-border-color: #8d8df0;
+
+    --primary-color: #a3d5fe;
+
+    --active-file-text-color: #0070e0;
+    --item-hover-bg-color: #70717d;
+    --item-hover-text-color: white;
+    --primary-color: #6dc1e7;
 }
 
-/**
- * forked from pixyll.com
- * MIT license
- */
-
+html,
+body,
+#write{
+	color: #5e676d;
+	font-family: "Open Sans", "Clear Sans", sans-serif;
+}
 h1,
-.h1,
-.f1 {
-	font-size: 2rem;
-	line-height: 2.5rem;
-}
 h2,
-.h2,
-.f2 {
-	font-size: 1.5rem;
-	line-height: 2rem;
-}
 h3,
-.h3,
-.f3 {
-	font-size: 1.25rem;
-	line-height: 1.5rem;
-}
-p,
-.p,
-.f4,
 h4,
 h5,
-h6,
-dl,
-ol,
-ul,
-pre[cid],
-div[cid],
-#typora-source {
-	font-size: 1.125rem;
-	line-height: 1.5rem;
+h6 {
+	/*font-weight: lighter;*/
+	font-weight: 100;
+	color: #5e676d;
+	font-family: "Open Sans", sans-serif;
+	margin: 0.5rem 0;
 }
 
-h4 {
-	font-size: 1.13rem;
-}
-/*
- Pixyll
- A simple, beautiful theme for Jekyll that emphasizes content rather than aesthetic fluff.
- Best served with BASSCSS (http://jxnblk.github.io/basscss)
- Crafted with <3 by John Otander (@4lpine) - ©2015 John Otander MIT License http://opensource.org/licenses/MIT
-
-*/
-
-body {
-	font-family: "Merriweather", "PT Serif", Georgia, "Times New Roman", "STSong", 'Segoe UI Emoji','SF Pro', Serif;
-	line-height: 1.5rem;
-	font-weight: 400;
+html {
+	font-size:16px;
 }
 
 #write {
 	max-width: 914px;
-	color: #333;
+	text-align: justify;
 }
 
-@media only screen and (min-width: 1400px) {
-	#write {
-		max-width: 1100px;
-	}
+#write>h1:first-child {
+	margin-top: 2.75rem;
 }
-
-@media only screen and (min-width: 1700px) {
-	#write {
-		max-width: 1200px;
-	}
+#write>h2:first-child {
+	margin-top: 1.75rem;
 }
-
-img {
-	width: auto;
-	max-width: 100%;
+#write>h3:first-child {
+	margin-top: 1rem;
 }
-body {
-	font-size: 1.5rem;
-	box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
+#write>h4:first-child {
+	margin-top: 0.5rem;
 }
-
-.ty-table-edit {
-	background: #ededed;
+h1 {
+	margin: 1rem 0;
+	/*line-height: 4rem;
+	padding: 5px 30px;
+	text-align: center;
+	margin-top: 4rem;*/
 }
-
-table {
-	width: 100%;
+h2 {
+	margin: 0.8rem 0;
+	/*
+	line-height: 3rem;
+	padding: 0 30px;
+	text-align: center;
+	margin-top: 3rem
+	*/
+}
+h3 {
+}
+h4 {
+}
+h5 {
 	font-size: 1.125rem;
 }
-table > thead > tr > th,
-table > thead > tr > td,
-table > tbody > tr > th,
-table > tbody > tr > td,
-table > tfoot > tr > th,
-table > tfoot > tr > td {
-	padding: 12px;
-	line-height: 1.2;
-	vertical-align: top;
-	border-top: 1px solid #333;
-}
-table > thead > tr > th {
-	vertical-align: bottom;
-	border-bottom: 2px solid #333;
-}
-table > caption + thead > tr:first-child > th,
-table > caption + thead > tr:first-child > td,
-table > colgroup + thead > tr:first-child > th,
-table > colgroup + thead > tr:first-child > td,
-table > thead:first-child > tr:first-child > th,
-table > thead:first-child > tr:first-child > td {
-	border-top: 0;
-}
-table > tbody + tbody {
-	border-top: 2px solid #333;
+h6 {
+	font-size: 1.1rem;
 }
 p {
-	font-weight: 300;
-	line-height: 1.5;
-}
-abbr {
-	border-bottom: 1px black dotted;
-	cursor: help;
-}
-pre,
-code {
-	font-family: Menlo, Monaco, "Courier New", monospace;
-}
-
-code,
-.md-fences  {
-	color: #7a7a7a;
-}
-
-.md-fences {
-	padding: 1.125em;
-	margin-bottom: 0.88em;
+	color: #5e676d;
 	font-size: 1rem;
-	border: 1px solid #7a7a7a;
-	padding-bottom: 0.5rem;
-	padding-top: 0.5rem;
+	line-height: 1.5rem;
+	margin: 0 0 1.25rem;
 }
-
-blockquote {
-	padding: 1.33em;
-	font-style: italic;
-	border-left: 5px solid #7a7a7a;
-	color: #555;
+#write>h3.md-focus:before {
+	left: -1.875rem;
+	top: 0.5rem;
+	padding: 2px;
 }
-blockquote em {
-	color: #000;
+#write>h4.md-focus:before {
+	left: -1.875rem;
+	top: 0.3125rem;
+	padding: 2px;
 }
-blockquote footer {
-	font-size: .85rem;
-	font-style: normal;
-	background-color: #fff;
-	color: #7a7a7a;
-	border-color: transparent;
+#write>h5.md-focus:before {
+	left: -1.875rem;
+	top: 0.25rem;
+	padding: 2px;
 }
-h1,
-.h1,
-h2,
-.h2,
-h3,
-.h3,
-h4,
-.h4,
-h5,
-.h5,
-h6,
-.h6 {
-	font-family: "Lato", 'Helvetica Neue', Helvetica, sans-serif;
-	font-weight: bold;
-	line-height: 1.2;
-	margin: 1em 0 0.5em;
+#write>h6.md-focus:before {
+	left: -1.875rem;
+	top: .125rem;
+	padding: 2px;
 }
-@media screen and (min-width: 48em) {
+/*@media screen and (min-width: 48em) {
 	.h1,
 	h1 {
 		font-size: 3.250rem;
@@ -423,24 +348,30 @@ h6,
 	}
 	.h4,
 	h4 {
-		font-size: 1.3rem;
+		font-size: 1.250rem;
+	}
+	.h5,
+	h5 {
+		font-size: 1.150rem;
+	}
+	.h6,
+	h6 {
+		font-size: 1rem;
 	}
 	#write>h4.md-focus:before,
 	#write>h5.md-focus:before,
-	#write>h6.md-focus:before{
+	#write>h6.md-focus:before {
 		top: 1px;
 	}
-	.p,
-	p,
-	li {
+	p {
 		font-size: 1.25rem;
 		line-height: 1.8;
 	}
 	table {
 		font-size: 1.25rem;
 	}
-}
-@media (max-width: 48em) {
+}*/
+@media screen and (max-width: 48em) {
 	blockquote {
 		margin-left: 1rem;
 		margin-right: 0;
@@ -460,245 +391,215 @@ h6,
 	}
 	.h4,
 	h4 {
-		font-size: 1.3rem;
+		font-size: 1.250rem;
+	}
+	.h5,
+	h5 {
+		font-size: 1.150rem;
+	}
+	.h6,
+	h6 {
+		font-size: 1rem;
 	}
 }
-@media screen and (min-width: 64em) {
-	.h1,
-	h1 {
-		font-size: 4.498rem;
-	}
-	.h2,
-	h2 {
-		font-size: 2.29rem;
-	}
-	.h3,
-	h3 {
-		font-size: 1.9rem;
-	}
-	.h4,
-	h4 {
-		font-size: 1.591rem;
-	}
-	#write>h4.md-focus:before{
-		top:4px;
-	}
+a,
+.md-def-url {
+	color: #007ee5;
+	text-decoration: none;
 }
-a {
-	color: #463F5C;
+a:hover {
 	text-decoration: underline;
 }
-
-#write {
-	padding-top: 2rem;
+table {
+	border: 1px solid #e2e2e2;
+	margin-bottom: 20px
 }
-
-#write pre.md-meta-block {
-	min-height: 35px;
-	padding: 0.5em 1em;
-	white-space: pre;
-	border: 0px;
-
-	border-left: 30px #f8f8f8 solid;
-	border-right: 30px #f8f8f8 solid;
-	width: 100vw;
-	max-width: calc(100% + 60px);
-
-	margin-left: -30px;
-	margin-bottom: 2em;
-	margin-top: -2010px;
-	padding-top: 2000px;
-	padding-bottom: 10px;
-	line-height: 1.5em;
-	color: #7a7a7a;
-	background-color: #fafafa;
-	font-family: 'Lato', 'Helvetica Neue', Helvetica, sans-serif;
-	font-weight: 300;
-	clear: both;
-	padding-left: 0;
-	font-size:1.125rem;
+table th,
+table td {
+	padding: 8px;
+	line-height: 1.5rem;
+	vertical-align: top;
+	border: 1px solid #e2e2e2;
 }
-.md-image>.md-meta {
-	color: #463F5C
+table th {
+	font-weight: normal;
+	background-color: #f0f7fd;
 }
-.footnotes {
-	font-size:1.1rem;
+table thead th {
+	vertical-align: bottom
 }
-.md-tag {
-	font-family: 'Lato', 'Helvetica Neue', Helvetica, sans-serif;
+table caption+thead tr:first-child th,
+table caption+thead tr:first-child td,
+table colgroup+thead tr:first-child th,
+table colgroup+thead tr:first-child td,
+table thead:first-child tr:first-child th,
+table thead:first-child tr:first-child td {
+	border-top: 0
 }
-.code-tooltip {
-	background: white;
+table tbody+tbody {
+	border-top: 2px solid #ddd
 }
-.code-tooltip-content {
-	font-size: 1.1rem;
+code, .md-fences {
+	padding: .5em;
+	background: #f6f9fc;
+	border: 1px solid #d0d4d9;
+	border-radius: 3px;
+	padding: .1em;
+	font-size: 0.9rem !important;
+	margin-left: 0.2em;
+	margin-right: 0.2em;
 }
-
+.md-fences {
+	margin: 0 0 20px;
+	font-size: 1em;
+	padding: 0.3em 1em;
+  	padding-top: 0.4em;
+}
 .task-list{
 	padding-left: 0;
 }
 
-.md-task-list-item {
-	padding-left:34px;
+.task-list-item {
+	padding-left:2.125rem;
 }
 
-.md-task-list-item > input{
-	width: 1.25rem;
-	height: 1.25rem;
-	display: block;
-	-webkit-appearance: initial;
-	top: -0.2rem;
-	margin-left: -1.6em;
-	margin-top: calc(1rem - 7px);
-	border: none;
+/* Chrome 29+ */
+@media screen and (-webkit-min-device-pixel-ratio:0)
+  and (min-resolution:.001dpcm) {
+    .task-list-item input:before {
+    	margin-top: -0.2rem;
+    }
+
+    .task-list-item input:checked:before,
+	.task-list-item input[checked]:before {
+		margin-top: -0.2rem;
+	}
 }
 
-.md-task-list-item > input:focus{
-	outline: none;
+blockquote {
+	margin: 0 0 1.11111rem;
+	padding: 0.5rem 1.11111rem 0 1.05556rem;
+	border-left: 2px solid rgba(0, 112, 224, 0.32);
+}
+blockquote,
+blockquote p {
+	line-height: 1.6;
+	color: #8f8f8f;
+}
+#write pre.md-meta-block {
+	min-height: 30px;
+	background: #f8f8f8;
+	padding: 1.5em;
+	font-weight: 300;
+	font-size: 1em;
+	padding-bottom: 1.5em;
+	padding-top: 3em;
+    margin-top: -1.5em;
+	color: #999;
+	border-left: 1000px #f8f8f8 solid;
+	margin-left: -1000px;
+	border-right: 1000px #f8f8f8 solid;
+	margin-right: -1000px;
+	margin-bottom: 2em;
+}
+.MathJax_Display {
+	font-size: 0.9em;
+	margin-top: 0.5em;
+	margin-bottom: 0;
+}
+p.mathjax-block,
+.mathjax-block {
+	padding-bottom: 0;
+}
+.mathjax-block>.code-tooltip {
+	bottom: 5px;
 	box-shadow: none;
 }
-
-.md-task-list-item > input:before{
-	border: 1px solid #555;
-	border-radius: 1.5rem;
-	width: 1.5rem;
-	height: 1.5rem;
-	background: #fff;
-	content: ' ';
-	transition: background-color 200ms ease-in-out;
-	display: block;
+.md-image>.md-meta {
+	padding-left: 0.5em;
+	padding-right: 0.5em;
+}
+.md-image>img {
+	margin-top: 2px;
+}
+.md-image>.md-meta:first-of-type:before {
+	padding-left: 4px;
 }
 
-.md-task-list-item > input:checked:before,
-.md-task-list-item > input[checked]:before{
-	background: #333;
-	border-width: 2px;
-	display:inline-block;
-	transition: background-color 200ms ease-in-out;
-}
-
-.md-task-list-item > input:checked:after,
-.md-task-list-item > input[checked]:after {
-	opacity: 1;
-}
-
-.md-task-list-item > input:after {
-	opacity: 1;
-	-webkit-transition: opacity 0.05s ease-in-out;
-	-moz-transition: opacity 0.05s ease-in-out;
-	transition: opacity 0.05s ease-in-out;
-	-webkit-transform: rotate(-45deg);
-	-moz-transform: rotate(-45deg);
-	transform: rotate(-45deg);
-	position: absolute;
-	top: 0.4375rem;
-	left: 0.28125rem;
-	width: 0.9375rem;
-	height: 0.5rem;
-	border: 3px solid #fff;
-	border-top: 0;
-	border-right: 0;
-	content: ' ';
-	opacity: 0;
-}
-
-.md-tag {
-	color:inherit;
-}
-
-.md-toc:focus .md-toc-content{
-	margin-top: 19px;
-}
-
-#typora-sidebar {
-	font-size:1rem !important;
-}
-
-.html-for-mac #typora-sidebar {
-	background-color:white;
-}
-
-.outline-content li, .outline-content ul {
-	font-size:1rem !important;
-}
-
-.outline-title {
-	line-height: inherit;
-	margin-top: 10px;
-}
-
-.outline-expander {
-	width: 18px;
-}
-
-.outline-expander:before {
- 	content: "+";
-	font-family: inherit;
-	color: rgb(108, 108, 108); 
-  font-size: 1.5rem;
- 	top: -0.1rem;
-}
-
-.outline-expander:hover:before {
-	content: "+";
-}
-
-.outline-item-open>.outline-item>.outline-expander:before{
-	content: "-";
-}
-
-/** source code mode */
 #typora-source {
-	font-family: Courier, monospace;
-    color: #6A6A6A;
+	color: #555;
 }
 
-.os-windows #typora-source {
-	font-family: inherit;
+/** ui for windows **/
+#md-searchpanel {
+    border-bottom: 1px solid #ccc;
 }
 
-.cm-s-typora-default .cm-header, 
-.cm-s-typora-default .cm-property,
-.CodeMirror.cm-s-typora-default div.CodeMirror-cursor {
-	color: #428bca;
+#md-searchpanel .btn {
+    border: 1px solid #ccc;
 }
 
-.cm-s-typora-default .cm-atom, .cm-s-typora-default .cm-number {
-	color: #777777;
+#md-notification:before {
+	top: 14px;
 }
 
-.md-diagram-panel {
-	margin-top: 24px;
-	margin-left: -1.2em;
+#md-notification {
+	background: #eee;
 }
 
-.md-mathjax-midline {
-	background: #fafafa;
+.megamenu-menu-panel .btn {
+	border: 1px solid #ccc;
 }
 
-.enable-diagrams pre.md-fences[lang="sequence"] .code-tooltip,
-.enable-diagrams pre.md-fences[lang="flow"] .code-tooltip,
-.enable-diagrams pre.md-fences[lang="mermaid"] .code-tooltip {
-    bottom: -3.4em;
+.mac-seamless-mode #typora-sidebar {
+  background-color: #f7f9fa;
 }
 
-.dropdown-menu .divider {
-	border-color: #e5e5e5;
+.pin-outline .outline-active {
+  color: #0070E0; 
 }
 
-li {
-	margin: 0.5rem 0;
+.file-list-item {
+  border-bottom: 1px solid;
+  border-color: #E6E8EB;
 }
 
-li > *:last-child {
-	margin-bottom: 0;
-}</style>
+.file-list-item-summary {
+  font-weight: 400;
+  color: #637282; 
+}
+
+.file-list-item.active {
+  color: #0070E0;
+  background-color: #E6E8EB;
+}
+
+.file-tree-node.active>.file-node-background {
+  background-color: #E6E8EB;
+} 
+
+.file-tree-node.active>.file-node-content {
+  color: #0070E0;
+}
+
+.file-node-content {
+  color: #5e676d;
+}
+
+.sidebar-tab.active {
+  font-weight: 400;
+}
+
+code, kbd, pre, samp {
+  font-family: "Roboto Mono", Menlo, monospace;
+}
+</style>
 <style type='text/css'  id="style-lp">ol, ul {padding-left: 40px}</style>
 <style type='text/css'  id="style-mac-print"> @media print { @page {margin: 0 0 0 0;} body.typora-export {padding-left: 0; padding-right: 0;} #write {padding:0;}}</style>
 
-<title>FSD Document </title>
+<title>fsdocument </title>
 </head>
 <body class='typora-export'><div class='typora-export-content'>
-<div id='write'  class=''><h1 id='function-specification-document'><span>Function Specification Document</span></h1><p>&nbsp;</p><p><span>TRACtoGo Project | Homepage and Car Rent feature</span></p><p><span>Created by: Rama</span></p><p><span>Date: August 21, 2025</span></p><p>&nbsp;</p><h3 id='table-of-contents'><span>Table of Contents</span></h3><p>&nbsp;</p><figure class='table-figure'><table><thead><tr><th style='text-align:center;' ><span>Author</span></th><th style='text-align:center;' ><span>Role</span></th><th style='text-align:center;' ><span>Department</span></th></tr></thead><tbody><tr><td style='text-align:center;' ><span>Rama</span></td><td style='text-align:center;' ><span>Technical Writer</span></td><td style='text-align:center;' ><span>IT</span></td></tr></tbody></table></figure><p>&nbsp;</p><p>&nbsp;</p><h2 id='introduction'><span>Introduction</span></h2><p><span>This </span><a href='http://detik.com'><span>document</span></a><span> is created to </span></p><p>&nbsp;</p></div></div>
+<div id='write'  class=''><p><strong><span>Note:</span></strong><span> This document is written using Markdown and published as an HTML document. If you want to read it in PDF format, click here.  </span></p><hr /><h1 id='function-specification-document'><strong><span>Function Specification Document</span></strong></h1><p>&nbsp;</p><p><span>TRACtoGo Project | Homepage and Car Rent feature</span></p><p><span>Created by: Rama</span></p><p><span>Date: August 21, 2025</span></p><p>&nbsp;</p><h1 id='table-of-contents'><strong><span>Table of Contents</span></strong></h1><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n3"><a class="md-toc-inner" href="#function-specification-document"><strong>Function Specification Document</strong></a></span><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n9"><a class="md-toc-inner" href="#table-of-contents"><strong>Table of Contents</strong></a></span><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n47"><a class="md-toc-inner" href="#introduction"><strong>Introduction</strong></a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n52"><a class="md-toc-inner" href="#purpose-of-document"><strong>Purpose of Document</strong></a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n56"><a class="md-toc-inner" href="#scope-of-project"><strong>Scope of Project</strong></a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n65"><a class="md-toc-inner" href="#reference-documents"><strong>Reference Documents</strong></a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n83"><a class="md-toc-inner" href="#acknowledgement"><strong>Acknowledgement</strong></a></span><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n103"><a class="md-toc-inner" href="#system-overview"><strong>System Overview</strong></a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n105"><a class="md-toc-inner" href="#objective"><strong>Objective</strong></a></span><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n115"><a class="md-toc-inner" href="#functional-requirements"><strong>Functional Requirements</strong></a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n117"><a class="md-toc-inner" href="#b2b-and-b2c-account-login"><strong>B2B and B2C Account Login</strong></a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n120"><a class="md-toc-inner" href="#use-cases"><strong>Use Cases</strong></a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n128"><a class="md-toc-inner" href="#user-flow"><strong>User Flow</strong></a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n143"><a class="md-toc-inner" href="#system-flow"><strong>System Flow</strong></a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n151"><a class="md-toc-inner" href="#switch-account"><strong>Switch Account</strong></a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n153"><a class="md-toc-inner" href="#use-cases-2"><strong>Use Cases</strong></a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n161"><a class="md-toc-inner" href="#user-flow-2"><strong>User Flow</strong></a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n172"><a class="md-toc-inner" href="#system-flow-2"><strong>System Flow</strong></a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n180"><a class="md-toc-inner" href="#rent-a-car"><strong>Rent a Car</strong></a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n182"><a class="md-toc-inner" href="#use-cases-3"><strong>Use Cases</strong></a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n190"><a class="md-toc-inner" href="#user-flow-3"><strong>User Flow</strong></a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n201"><a class="md-toc-inner" href="#system-flow-3"><strong>System Flow</strong></a></span><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n212"><a class="md-toc-inner" href="#interface-requirements"><strong>Interface Requirements</strong> </a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n214"><a class="md-toc-inner" href="#user-flow-4"><strong>User Flow</strong></a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n216"><a class="md-toc-inner" href="#switch-account-2"><strong>Switch account</strong></a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n223"><a class="md-toc-inner" href="#rent-a-car-2"><strong>Rent a car</strong></a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n231"><a class="md-toc-inner" href="#system-flow-4"><strong>System Flow</strong></a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n233"><a class="md-toc-inner" href="#login"><strong>Login</strong></a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n235"><a class="md-toc-inner" href="#proposal-design"><strong>Proposal Design</strong></a></span><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n237"><a class="md-toc-inner" href="#non-functional-requirements"><strong>Non-Functional Requirements</strong></a></span><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n239"><a class="md-toc-inner" href="#assumptions-and-constraints"><strong>Assumptions and Constraints</strong></a></span><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n241"><a class="md-toc-inner" href="#dependencies-and-risks"><strong>Dependencies and Risks</strong></a></span><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n243"><a class="md-toc-inner" href="#acceptance-criteria"><strong>Acceptance Criteria</strong></a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n246"><a class="md-toc-inner" href="#thanks-for-reading"><strong>Thanks for reading!</strong> </a></span></p></div><hr /><p><strong><span>Author</span></strong></p><figure class='table-figure'><table><thead><tr><th style='text-align:center;' ><span>Author</span></th><th style='text-align:center;' ><span>Role</span></th><th style='text-align:center;' ><span>Department</span></th></tr></thead><tbody><tr><td style='text-align:center;' ><span>Rama</span></td><td style='text-align:center;' ><span>Technical Writer</span></td><td style='text-align:center;' ><span>IT</span></td></tr></tbody></table></figure><p><strong><span>Document History</span></strong></p><figure class='table-figure'><table><thead><tr><th style='text-align:center;' ><span>Date</span></th><th style='text-align:center;' ><span>Version</span></th><th style='text-align:center;' ><span>Revision</span></th><th style='text-align:center;' ><span>Author</span></th></tr></thead><tbody><tr><td style='text-align:center;' ><span>August 21, 2025</span></td><td style='text-align:center;' ><span>v. 1.0</span></td><td style='text-align:center;' ><span>Fix the use case for switch account feature</span></td><td style='text-align:center;' ><span>Rama</span></td></tr></tbody></table></figure><p><strong><span>Approver</span></strong></p><figure class='table-figure'><table><thead><tr><th style='text-align:center;' ><span>Date</span></th><th style='text-align:center;' ><span>Version</span></th><th style='text-align:center;' ><span>Approver Role</span></th><th style='text-align:center;' ><span>Approver</span></th></tr></thead><tbody><tr><td style='text-align:center;' ><span>August 25, 2025</span></td><td style='text-align:center;' ><span>v. 1.0</span></td><td style='text-align:center;' ><span>Lead</span></td><td style='text-align:center;' ><span>Iqdam</span></td></tr></tbody></table></figure><p>&nbsp;</p><h1 id='introduction'><strong><span>Introduction</span></strong></h1><p><span>At TRAC, we always do our best to optimize user satisfaction. </span></p><p><span>However, all this time, our focus is always on the B2B users, and we are rarely aware of our B2C users. Since in recent years, our B2C users are increasing, that makes us think that we need to expand our reach to the B2C market. The research team also found that the market potential is significantly high.</span></p><p><span>However, this step raises a new challenge. Currently, the best way to reach B2C users is through a mobile app, and our mobile app is still lagging behind in innovation and having low user experience satisfaction. Therefore, despite recognizing the immense potential within the B2C market, we&#39;ve struggled to capture their attention and engagement.</span></p><p><span>To address this, we&#39;ve decided to take a bold step: We will merge B2B and B2C products and users onto a single superapp platform.</span></p><h2 id='purpose-of-document'><strong><span>Purpose of Document</span></strong></h2><p><span>This Functional Specification Document (FSD) serves as the foundational guide for the comprehensive development of the innovative TRACtoGo mobile application. Its primary purpose is to translate the high-level business needs outlined in the Business Requirement Document (BRD) into detailed functional specifications, ensuring that the final product  successfully delivers all the suggested requirements and business expectations. The FSD is a critical bridge between business objectives and technical implementation, offering a holistic view of the application&#39;s intended functionality and user experience.</span></p><p><span>This FSD focuses specifically on the Homepage and Car Rent features of the new TRACtoGo. Other features are detailed in the other FSD, and you can check it in the FSD repository. For these two features, Homepage and Car Rent, this document outlines essential components to guide the development process. </span></p><p><span>The FSD aims to minimize ambiguities, facilitate effective communication among stakeholders (developers, testers, business analysts, and product owners), and ensure that the TRACtoGo mobile application is developed efficiently, accurately, and in full alignment with the business requirements.</span></p><h2 id='scope-of-project'><strong><span>Scope of Project</span></strong></h2><p><span>The rebuild of TRACtoGo will take time and we&#39;re going step by step considering the amount of resources that we have. Therefore, we need to separate the iteration into multiple parts that are possible to accomplish. In this iteration, the scope of the development will be limited to:</span></p><ol start='' ><li><p><span>Merging the B2B and B2C accounts. </span></p></li><li><p><span>Switching accounts from B2B and B2C.</span></p></li><li><p><span>A new flow of car rent from start to end (from booking process to payment).</span></p></li></ol><h2 id='reference-documents'><strong><span>Reference Documents</span></strong></h2><p><span>This document is created following the feedback and report from these documents below:</span></p><figure class='table-figure'><table><thead><tr><th style='text-align:center;' ><span>No</span></th><th style='text-align:center;' ><span>Title</span></th><th style='text-align:center;' ><span>Issued by</span></th><th style='text-align:center;' ><span>Role</span></th></tr></thead><tbody><tr><td style='text-align:center;' ><span>1</span></td><td style='text-align:center;' ><span>Research Report - B2C user interest</span></td><td style='text-align:center;' ><span>Prakiti Dana</span></td><td style='text-align:center;' ><span>UX Research</span></td></tr><tr><td style='text-align:center;' ><span>2</span></td><td style='text-align:center;' ><span>Merging B2B and B2C product</span></td><td style='text-align:center;' ><span>Wahyudi Jaja</span></td><td style='text-align:center;' ><span>Business Developer</span></td></tr></tbody></table></figure><h2 id='acknowledgement'><strong><span>Acknowledgement</span></strong></h2><p><span>All the context in this document is checked and monitored by the responsible stakeholders below:</span></p><figure class='table-figure'><table><thead><tr><th style='text-align:center;' ><span>Name</span></th><th style='text-align:center;' ><span>Role</span></th><th style='text-align:center;' ><span>Department</span></th></tr></thead><tbody><tr><td style='text-align:center;' ><span>Marto Sungkar</span></td><td style='text-align:center;' ><span>Head</span></td><td style='text-align:center;' ><span>IT</span></td></tr><tr><td style='text-align:center;' ><span>Zul Herry</span></td><td style='text-align:center;' ><span>Head</span></td><td style='text-align:center;' ><span>Product</span></td></tr><tr><td style='text-align:center;' ><span>Astri Malala</span></td><td style='text-align:center;' ><span>Head</span></td><td style='text-align:center;' ><span>Business</span></td></tr></tbody></table></figure><p>&nbsp;</p><h1 id='system-overview'><strong><span>System Overview</span></strong></h1><p><span>TRACtoGo app now entering a new phase that will serve for both B2B and B2C users together in a one ecosystem. The app expected to be more user friendly, intuitive, and have better flows and user experience. The new app will also provide better account management and the service is not limited to the rent itself, but also for request the maintenance for the rented vehicles.</span></p><h2 id='objective'><strong><span>Objective</span></strong></h2><p><span>The first phase of release will introduces three major features aimed at simplifying account access, enhancing usability, and streamlining the car rental journey. These are consists: </span></p><ol start='' ><li><p><span>For both B2B and B2C user should be able to login and using the one TRACtoGo app. Users can access one app to manage personal or corporate rentals, selecting either ‘Login as B2B’ or ‘Login as B2C’ directly from the login screen. This integration allows seamless switching between business and individual contexts, reducing confusion and improving overall efficiency.</span></p></li><li><p><span>Both of B2B and B2C user are able to switch account. The homepage now offers an intuitive account switching feature. Users can quickly transition between B2B and B2C profiles without logging out, making it easy for those who manage rentals in both contexts to access all relevant data and actions in one place.</span></p></li><li><p><span>The booking flow will be simplified. The new flow connects vehicle booking directly to payment completion, ensuring users have a clear, guided path from rental selection through to successful transaction. This update reduces friction, clarifies progress, and provides timely feedback at each step of the journey.</span></p></li></ol><p>&nbsp;</p><h1 id='functional-requirements'><strong><span>Functional Requirements</span></strong></h1><p><span>This section is included to explain clearly how the new system of TRACtoGo works and its correlation with the interaction of all actors (users and TRAC). It will be limited to the three features that we’ve already discussed and are going to develop. Furthermore, the use cases are used to deliver a better understanding to all related stakeholders. </span></p><h2 id='b2b-and-b2c-account-login'><strong><span>B2B and B2C Account Login</span></strong></h2><p><span>The new version of TRACtoGo must cater for both B2B and B2C needs. </span></p><p><span>The B2B user who gets the account from our Account Executive and the partnership between the company and TRAC will get their own account. While in the meantime, the B2C can always create their account through the app. </span></p><h3 id='use-cases'><strong><span>Use Cases</span></strong></h3><figure class='table-figure'><table><thead><tr><th><strong><span>Login for both B2B and B2C</span></strong></th><th style='text-align:left;' ><strong><span>Details</span></strong></th></tr></thead><tbody><tr><td><img src="/Users/rama/Documents/B2B and B2C Login.jpg" alt="B2B and B2C Login" style="zoom:50%;" /></td><td style='text-align:left;' ><span>Things to note in this use cases:</span><br /><span>1. The use cases applied for both B2B and B2C users.</span><br /><span>2. User need to input their account and let the system check the type of their account.</span><br /><span>3. When the system know the type of account, it will direct the user to the B2B or B2C homepage.</span></td></tr></tbody></table></figure><h3 id='user-flow'><strong><span>User Flow</span></strong></h3><p><span>The new login flow is different from the previous one. This time, the user will need to choose their type of account at the beginning before they input the username. Nevertheless, the flow should be simple and easy to follow. </span></p><figure class='table-figure'><table><thead><tr><th><strong><span>Things to note:</span></strong><span> The login flow here is not included the edge cases. It only for the ideal flow to give a bigger picture of how the user interacts with the app towards their goal. Further discussion for edge cases will be needed and handle with the Product and UI/UX team and will provides in the separate document.</span></th></tr></thead><tbody><tr><td><img src="/Users/rama/Documents/Login flow.jpg" alt="Login flow" style="zoom:50%;" /></td></tr></tbody></table></figure><p><strong><span>Requirements:</span></strong></p><ol start='' ><li><p><span>The B2B account is only created for individuals or companies that already have a partnership with TRAC.</span></p></li><li><p><span>Personal users cannot create a B2B account through the application.</span></p></li><li><p><span>For B2C users, if they haven&#39;t created the account, they must create an account first before they are able to log in. The register flow is provided separately from this document. </span></p></li></ol><h3 id='system-flow'><strong><span>System Flow</span></strong></h3><p><span>The system</span></p><figure class='table-figure'><table><thead><tr><th>&nbsp;</th></tr></thead><tbody><tr><td>&nbsp;</td></tr></tbody></table></figure><p>&nbsp;</p><h2 id='switch-account'><strong><span>Switch Account</span></strong></h2><p><span>Since the user can have both B2B and B2C account. They can use the service following their account type. Therefore, the user should be able to switch between their accounts practically.</span></p><h3 id='use-cases-2'><strong><span>Use Cases</span></strong></h3><figure class='table-figure'><table><thead><tr><th><strong><span>Switch account entry point</span></strong></th><th><strong><span>Details</span></strong></th></tr></thead><tbody><tr><td><img src="/Users/rama/Documents/Switch account.jpg" alt="Switch account" style="zoom: 50%;" /></td><td><span>Things to note in this use cases:</span><br /><span>1. The use cases is also applied for the B2C users.</span><br /><span>2. When user only have 1 type of account, they cannot continue to switch the account.</span><br /><span>3. Need to discuss the type of error with the UX team related to this.</span></td></tr></tbody></table></figure><h3 id='user-flow-2'><strong><span>User Flow</span></strong></h3><p><span>The user flow for switching account is</span></p><figure class='table-figure'><table><thead><tr><th><strong><span>Things to note:</span></strong><span> This is the ideal flow. Some edge cases are not catered to in this flow, such as: &quot;What if the user doesn&#39;t have the account yet?&quot;, &quot;What if the user hasn’t logged in yet?&quot; For some edge cases, they were described in separate documents.</span></th></tr></thead><tbody><tr><td><img src="/Users/rama/Library/Application Support/typora-user-images/Screenshot 2025-09-23 at 10.57.24.png" alt="Screenshot 2025-09-23 at 10.57.24"></td></tr></tbody></table></figure><p><strong><span>Requirements:</span></strong></p><ol start='' ><li><p><span>The flow indicated that the user already have and logged in for their B2B and B2C account. </span></p></li></ol><h3 id='system-flow-2'><strong><span>System Flow</span></strong></h3><p><span>The </span></p><figure class='table-figure'><table><thead><tr><th><strong><span>Things to note:</span></strong><span> the switching account feature should be simple. Furthermore, when a user doesn&#39;t have a personal account, the scenario will be explained in detail in the design workflow with the UX Design team. Basically, the user just needs to create their personal account first before logging in.</span></th></tr></thead><tbody><tr><td><img src="/Users/rama/Library/Application Support/typora-user-images/Screenshot 2025-09-23 at 14.44.32.png" alt="Screenshot 2025-09-23 at 14.44.32"></td></tr></tbody></table></figure><p><span>Things to note: the switching account feature should be simple. Furthermore, when a user doesn&#39;t have a personal account, the scenario will be explained in detail in the design workflow with the Designe team. Basically, the user just needs to create their personal account first before logging in.</span></p><h2 id='rent-a-car'><strong><span>Rent a Car</span></strong></h2><p><span>The new car rent flow must be more simple than the old version of TRACtoGo. Although we need to deliver a better version of TRACtoGo, some constraints remain persistent and will be explained briefly in the </span><strong><span>Assumptions and Constraints</span></strong><span> section.</span></p><h3 id='use-cases-3'><strong><span>Use Cases</span></strong></h3><figure class='table-figure'><table><thead><tr><th><span>Rent car flow</span></th><th><span>Details</span></th></tr></thead><tbody><tr><td><img src="/Users/rama/Documents/CarRent.jpg" alt="CarRent" style="zoom: 50%;" /></td><td><span>Things to note in this use case: </span><br /><span>1. The car list is different between the B2B and B2C accounts. </span><br /><span>2. For the B2B account, the variety of cars is much more.</span><br /><span>3. The system will need less than a minute to check the availability of the car that the user has booked.</span><br /><span>4. The operator might need to contact the users outside of the application. Considering the chat messaging feature is not available yet.</span></td></tr></tbody></table></figure><h3 id='user-flow-3'><strong><span>User Flow</span></strong></h3><p><span>asd</span></p><figure class='table-figure'><table><thead><tr><th><strong><span>Things to note:</span></strong><span> The user flow is for an ideal scenario for both B2B or B2C users in the bigger version. For further details of the user flow, you need to check the workflow from the UI/UX team that has been created in the Figma file here.</span></th></tr></thead><tbody><tr><td><img src="/Users/rama/Library/Application Support/typora-user-images/Screenshot 2025-09-23 at 11.12.36.png" alt="Screenshot 2025-09-23 at 11.12.36"></td></tr></tbody></table></figure><p><strong><span>Requirements:</span></strong></p><ol start='' ><li><p>&nbsp;</p></li></ol><h3 id='system-flow-3'><strong><span>System Flow</span></strong></h3><p><span>asd</span></p><figure class='table-figure'><table><thead><tr><th style='text-align:left;' ><strong><span>Things to note:</span></strong><span> The system flow is required to understand the positive scenario of how the rent a car feature works. Like other flows, the details of the edge case scenario will be explained in a separate document.</span></th></tr></thead><tbody><tr><td style='text-align:left;' ><img src="/Users/rama/Documents/car rent system flow.jpg" alt="car rent system flow" style="zoom: 25%;" /></td></tr></tbody></table></figure><p><strong><span>Requirements:</span></strong></p><ol start='' ><li><p>&nbsp;</p></li></ol><h1 id='interface-requirements'><strong><span>Interface Requirements</span></strong><span> </span></h1><p><span>Step further This section is about the new iteration design and interface that proposed by the design and product team.</span></p><h2 id='user-flow-4'><strong><span>User Flow</span></strong></h2><p><span>The user workflow is described for how the user interact with the application and how many steps that they&#39;re required to accomplish their goal. </span></p><h3 id='switch-account-2'><strong><span>Switch account</span></strong></h3><p><span>The switch account feature is available for both B2B and B2C users.</span></p><figure class='table-figure'><table><thead><tr><th><strong><span>Things to note:</span></strong><span> Switch accounts is always accessible from the Homepage. If the user didn&#39;t have an account, either it&#39;s B2B or B2C, we still make the entry point visible so that the user can be acknowledged about the feature.</span></th></tr></thead><tbody><tr><td>&nbsp;</td></tr></tbody></table></figure><h3 id='rent-a-car-2'><strong><span>Rent a car</span></strong></h3><p><span>Different user will see different car list.</span></p><figure class='table-figure'><table><thead><tr><th><span>Things to note:</span></th></tr></thead><tbody><tr><td>&nbsp;</td></tr></tbody></table></figure><p>&nbsp;</p><h2 id='system-flow-4'><strong><span>System Flow</span></strong></h2><p><span>The system workflow describe how the system running towards the goal that user planning to do. This might describe how the login process, the edge cases of when error happens, and what happens when user accomplished the goal.</span></p><h3 id='login'><strong><span>Login</span></strong></h3><p>&nbsp;</p><h2 id='proposal-design'><strong><span>Proposal Design</span></strong></h2><p>&nbsp;</p><h1 id='non-functional-requirements'><strong><span>Non-Functional Requirements</span></strong></h1><p><span>Covers supporting aspects like system performance, security, reliability, and scalability</span></p><h1 id='assumptions-and-constraints'><strong><span>Assumptions and Constraints</span></strong></h1><p><span>Lists key assumptions and any technical or business limitations that could affect design or delivery</span></p><h1 id='dependencies-and-risks'><strong><span>Dependencies and Risks</span></strong></h1><p><span>Highlights external dependencies and potential project risks that must be managed</span></p><h1 id='acceptance-criteria'><strong><span>Acceptance Criteria</span></strong></h1><p><span>Defines measurable conditions or outcomes that must be met for the product/feature to be considered complete and delivered</span></p><hr /><h2 id='thanks-for-reading'><strong><span>Thanks for reading!</span></strong><span> </span></h2><p><span>Check my other case study below.</span></p><figure class='table-figure'><table><thead><tr><th style='text-align:center;' ><a href='detik.com'><span>FAQ</span></a></th><th style='text-align:center;' ><span>User Manual</span></th><th style='text-align:center;' ><span>Release Notes and Changelog</span></th></tr></thead><tbody></tbody></table></figure></div></div>
 </body>
 </html>
